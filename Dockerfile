@@ -10,7 +10,7 @@ WORKDIR /src/
 RUN npm install
 
 # Build the app
-RUN npm build
+# RUN npm build
 
 # Expose the app port
 EXPOSE 8000
