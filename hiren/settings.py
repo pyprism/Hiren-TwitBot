@@ -28,7 +28,7 @@ except FileNotFoundError:
     with open(BASE_DIR + '/' + 'config.json') as f:
         JSON_DATA = json.load(f)
 
-os.environ.get('SECRET_KEY', JSON_DATA['secret_key'])
+SECRET_KEY = os.environ.get('SECRET_KEY', JSON_DATA['secret_key'])
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', False)
